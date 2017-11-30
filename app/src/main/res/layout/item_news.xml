@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    style="@style/news_summary_card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="2dp"
+    >
+    <!--app:cardCornerRadius="2dp"-->
+    <!--app:contentPadding="0dp"-->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.elyeproj.loaderviewlibrary.LoaderImageView
+            android:id="@+id/news_summary_photo_iv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/item_margin"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/transition_photos"
+            tools:targetApi="lollipop"
+            app:use_gradient="true"/>
+
+        <com.elyeproj.loaderviewlibrary.LoaderTextView
+            android:id="@+id/news_summary_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/news_summary_photo_iv"
+            android:layout_marginRight="@dimen/item_margin"
+            android:layout_toRightOf="@+id/news_summary_photo_iv"
+            android:lines="2"
+            android:textSize="18sp"
+            app:use_gradient="true"
+            tools:text="习近平:吹响建设科技强国号角国号角国号角"/>
+
+        <com.elyeproj.loaderviewlibrary.LoaderTextView
+            android:id="@+id/news_summary_digest_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_summary_title_tv"
+            android:layout_marginRight="@dimen/item_margin"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/news_summary_photo_iv"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="14sp"
+            app:use_gradient="true"
+            tools:text="科技是国之利器，中国人民生活要好，必须有强大科技。"/>
+
+        <com.elyeproj.loaderviewlibrary.LoaderTextView
+            android:id="@+id/news_summary_ptime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/news_summary_digest_tv"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="@dimen/item_margin"
+            android:textSize="12sp"
+            app:use_gradient="true"
+            tools:text="05-28 20:09"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
